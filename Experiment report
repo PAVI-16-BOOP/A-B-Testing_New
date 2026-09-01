@@ -1,0 +1,36 @@
+# A/B Test Report: New Landing Page vs Old Landing Page
+
+## What we were testing
+
+We wanted to know if a redesigned landing page gets more people to buy compared to the old one. Half the visitors saw the old page (control), half saw the new page (treatment). We said upfront that the new page needed to lift conversions by at least 2 percentage points to be worth rolling out.
+
+## Cleaning the data first
+
+Before looking at any results, we found that some visitors were logged incorrectly — either shown the wrong page for their group, or shown both pages at different times. We removed these 5,789 problematic rows, leaving 288,689 clean visitors to analyze. Skipping this step would have made every result below unreliable.
+
+## Was the experiment set up properly?
+
+Yes. Based on the size of lift we cared about (2 percentage points), we needed at least ~4,441 visitors per group to trust the results. We had over 144,000 per group — more than enough.
+
+## The headline result
+
+| Rate                 |        |
+| -------------------- | ------ |
+| Old page (control)   | 12.03% |
+| New page (treatment) | 11.88% |
+
+The new page did **not** outperform the old one — if anything, it converted slightly worse. The difference (p = 0.22) is well within the range you'd expect from random chance alone, so we can't say the new page made any real difference, positive or negative.
+
+We also checked this using a different statistical approach (Bayesian analysis) and got the same answer: there's only an 11% chance the new page is actually better than the old one, and the most likely true difference is close to zero, possibly slightly negative.
+
+## Did it work better for anyone specific?
+
+We checked 8 different user groups — by time of day, weekday vs weekend, and early vs late in the test — to see if the new page won anywhere even if it didn't win overall.
+
+One group, **Evening visitors**, showed a small positive gap (12.25% vs 11.95%), but this wasn't statistically significant either (p = 0.23) — same story, likely just noise. Every other group we checked showed the new page performing the same or worse than the old one.
+
+We also checked whether excitement about the new page faded over time (a "novelty effect") and found no such pattern — the two pages tracked each other closely throughout the entire test period.
+
+## Recommendation
+
+**Do not roll out the new page.** Across the overall result and every segment we checked, there's no reliable evidence it improves conversions, and in most cases it performs a little worse. If there's still interest in the new design, we'd recommend a fresh, dedicated test rather than assuming any of these numbers as a starting point.
