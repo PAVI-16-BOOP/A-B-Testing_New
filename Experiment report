@@ -1,6 +1,6 @@
 # A/B Test Report: New Landing Page vs. Old Landing Page
 
-##  Experiment Overview
+## 🎯 Experiment Overview
 
 We evaluated whether a redesigned landing page increases visitor conversion rates compared to the original design. Visitors were split evenly into two groups:
 
@@ -11,7 +11,7 @@ We evaluated whether a redesigned landing page increases visitor conversion rate
 
 ---
 
-## 🧹 Data Cleaning & Integrity checks
+## 🧹 Data Cleaning & Integrity Checks
 
 Before running statistical analysis, we audited the raw dataset for user-logging anomalies:
 
@@ -39,6 +39,8 @@ Before running statistical analysis, we audited the raw dataset for user-logging
 * **Frequentist Analysis:** The treatment page underperformed control by -0.15 percentage points. This difference is statistically insignificant ($p = 0.22$), indicating the variation is well within expected random noise.
 * **Bayesian Verification:** Modeled results indicate only an **11% probability** that the new page is superior to the old page, with the true effect centered near zero (slight negative skew).
 
+<img src="./bayesian_posteriors.png" alt="Bayesian Posteriors" width="100%"/>
+
 ---
 
 ## 🔍 Segment & Novelty Analysis
@@ -48,6 +50,8 @@ We evaluated 8 sub-segments across temporal variables to check if the redesign s
 * **Time of Day:** **Evening visitors** showed a minor positive delta (**12.25%** treatment vs. **11.95%** control), but the difference was statistically insignificant ($p = 0.23$) and likely represents random variance.
 * **Day Type & Test Timing:** Weekday/weekend splits and early vs. late test cohorts showed the treatment performing equal to or worse than the control.
 * **Novelty Effect Check:** Daily conversion rates for both variants tracked in parallel across the full experiment window, ruling out initial novelty spikes or fatigue over time.
+
+<img src="./novelty_trend_analysis.png" alt="Novelty Trend Analysis" width="100%"/>
 
 ---
 
